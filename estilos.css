@@ -1,0 +1,460 @@
+/* Variables y configuración general */
+:root {
+    --azul-oscuro: #0f172a;
+    --azul: #2563eb;
+    --azul-claro: #dbeafe;
+    --celeste: #38bdf8;
+    --blanco: #ffffff;
+    --gris-fondo: #f1f5f9;
+    --gris-texto: #475569;
+    --gris-borde: #e2e8f0;
+    --verde: #16a34a;
+    --sombra: 0 10px 30px rgba(15, 23, 42, 0.1);
+    --radio: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--gris-fondo);
+    color: var(--azul-oscuro);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Componentes reutilizables */
+.boton {
+    align-items: center;
+    border-radius: 10px;
+    display: inline-flex;
+    font-weight: 700;
+    justify-content: center;
+    padding: 0.75rem 1.25rem;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.boton:hover {
+    transform: translateY(-2px);
+}
+
+.etiqueta {
+    color: var(--celeste);
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.12rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.seccion {
+    padding: 5rem max(5%, calc((100% - 1200px) / 2));
+}
+
+.titulo-seccion {
+    margin: 0 auto 2.5rem;
+    max-width: 700px;
+    text-align: center;
+}
+
+.titulo-seccion h2 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+}
+
+.titulo-seccion > p:last-child {
+    color: var(--gris-texto);
+}
+
+/* Encabezado: Flexbox */
+.encabezado {
+    align-items: center;
+    background-color: var(--blanco);
+    box-shadow: 0 2px 15px rgba(15, 23, 42, 0.08);
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    min-height: 76px;
+    padding: 0.75rem max(5%, calc((100% - 1200px) / 2));
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.marca {
+    align-items: center;
+    display: flex;
+    font-size: 1.25rem;
+    font-weight: 800;
+    gap: 0.7rem;
+}
+
+.logotipo {
+    align-items: center;
+    background: linear-gradient(135deg, var(--azul), var(--celeste));
+    border-radius: 10px;
+    color: var(--blanco);
+    display: flex;
+    height: 44px;
+    justify-content: center;
+    width: 44px;
+}
+
+.navegacion ul {
+    align-items: center;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navegacion a {
+    color: var(--gris-texto);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navegacion a:hover,
+.enlaces-pie a:hover {
+    color: var(--celeste);
+}
+
+.boton-catalogo {
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+
+.boton-catalogo:hover {
+    background-color: #1d4ed8;
+}
+
+/* Banner */
+.banner {
+    align-items: center;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(15, 23, 42, 0.95) 0%,
+            rgba(15, 23, 42, 0.78) 48%,
+            rgba(15, 23, 42, 0.3) 100%
+        ),
+        url("[images.unsplash.com](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=85)")
+        center / cover;
+    color: var(--blanco);
+    display: flex;
+    min-height: 610px;
+    padding: 5rem max(5%, calc((100% - 1200px) / 2));
+}
+
+.contenido-banner {
+    max-width: 680px;
+}
+
+.contenido-banner h1 {
+    font-size: clamp(2.3rem, 6vw, 4.5rem);
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
+}
+
+.contenido-banner > p:not(.etiqueta) {
+    color: #dbeafe;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 580px;
+}
+
+.boton-principal {
+    background-color: var(--celeste);
+    color: var(--azul-oscuro);
+}
+
+.boton-principal:hover {
+    background-color: var(--blanco);
+}
+
+/* Catálogo: CSS Grid */
+.catalogo {
+    background-color: var(--gris-fondo);
+}
+
+.rejilla-productos {
+    display: grid;
+    gap: 1.75rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Tarjetas: Flexbox interno */
+.tarjeta-producto {
+    background-color: var(--blanco);
+    border: 1px solid var(--gris-borde);
+    border-radius: var(--radio);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition:
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+.tarjeta-producto:hover {
+    box-shadow: var(--sombra);
+    transform: translateY(-8px);
+}
+
+.tarjeta-producto > img {
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    width: 100%;
+}
+
+.tarjeta-producto:hover > img {
+    transform: scale(1.04);
+}
+
+.contenido-tarjeta {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.categoria {
+    align-self: flex-start;
+    background-color: var(--azul-claro);
+    border-radius: 999px;
+    color: var(--azul);
+    font-size: 0.75rem;
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+    padding: 0.25rem 0.7rem;
+    text-transform: uppercase;
+}
+
+.contenido-tarjeta h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.contenido-tarjeta > p {
+    color: var(--gris-texto);
+    margin-bottom: 1rem;
+}
+
+.caracteristicas {
+    border-top: 1px solid var(--gris-borde);
+    color: var(--gris-texto);
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+}
+
+.caracteristicas li + li {
+    margin-top: 0.35rem;
+}
+
+.pie-tarjeta {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.precio {
+    color: var(--verde);
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+.boton-detalle {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    font-size: 0.9rem;
+    padding: 0.65rem 1rem;
+}
+
+.boton-detalle:hover {
+    background-color: var(--azul);
+}
+
+/* Beneficios */
+.beneficios {
+    background-color: var(--blanco);
+}
+
+.rejilla-beneficios {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.beneficio {
+    background-color: var(--gris-fondo);
+    border-radius: var(--radio);
+    padding: 2rem;
+    text-align: center;
+}
+
+.icono-beneficio {
+    align-items: center;
+    background-color: var(--azul);
+    border-radius: 50%;
+    color: var(--blanco);
+    display: flex;
+    font-size: 1.4rem;
+    font-weight: 800;
+    height: 56px;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    width: 56px;
+}
+
+.beneficio h3 {
+    margin-bottom: 0.5rem;
+}
+
+.beneficio p {
+    color: var(--gris-texto);
+}
+
+/* Pie de página */
+.pie-pagina {
+    background-color: var(--azul-oscuro);
+    color: #cbd5e1;
+    padding: 4rem max(5%, calc((100% - 1200px) / 2)) 1.5rem;
+}
+
+.contenido-pie {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1.5fr 1fr 0.7fr;
+}
+
+.marca-pie {
+    color: var(--blanco);
+    margin-bottom: 1rem;
+}
+
+.contenido-pie h2 {
+    color: var(--blanco);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+address {
+    font-style: normal;
+}
+
+address a,
+.enlaces-pie a {
+    transition: color 0.3s ease;
+}
+
+.enlaces-pie li + li,
+address p + p {
+    margin-top: 0.5rem;
+}
+
+.derechos {
+    border-top: 1px solid #334155;
+    font-size: 0.9rem;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    text-align: center;
+}
+
+/* Diseño adaptable */
+@media (max-width: 900px) {
+    .encabezado {
+        flex-wrap: wrap;
+    }
+
+    .navegacion {
+        order: 3;
+        width: 100%;
+    }
+
+    .navegacion ul {
+        justify-content: center;
+        padding-bottom: 0.5rem;
+    }
+
+    .rejilla-productos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contenido-pie {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .encabezado {
+        justify-content: center;
+    }
+
+    .navegacion ul {
+        flex-wrap: wrap;
+        gap: 0.75rem 1.25rem;
+    }
+
+    .boton-catalogo {
+        display: none;
+    }
+
+    .banner {
+        min-height: 540px;
+        text-align: center;
+    }
+
+    .contenido-banner > p:not(.etiqueta) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .rejilla-productos,
+    .rejilla-beneficios,
+    .contenido-pie {
+        grid-template-columns: 1fr;
+    }
+
+    .seccion {
+        padding-bottom: 3.5rem;
+        padding-top: 3.5rem;
+    }
+
+    .pie-tarjeta {
+        align-items: stretch;
+        flex-direction: column;
+    }
+}
+
+/* Accesibilidad para navegación con teclado */
+a:focus-visible {
+    outline: 3px solid var(--celeste);
+    outline-offset: 4px;
+}
