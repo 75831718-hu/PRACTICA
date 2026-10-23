@@ -1,308 +1,101 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta
-        name="description"
-        content="Catálogo digital de productos tecnológicos de TecnoNova."
-    >
-    <title>TecnoNova | Catálogo tecnológico</title>
+    <title>TechNova - Catálogo</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
-
 <body>
-    <header class="encabezado">
-        <a href="#inicio" class="marca" aria-label="Ir al inicio de TecnoNova">
-            <span class="logotipo" aria-hidden="true">TN</span>
-            <span>TecnoNova</span>
-        </a>
 
-        <nav class="navegacion" aria-label="Navegación principal">
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#catalogo">Productos</a></li>
-                <li><a href="#beneficios">Beneficios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
+    <header>
+        <h1>💻 TechNova</h1>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#contacto">Contacto</a>
         </nav>
-
-        <a href="#catalogo" class="boton boton-catalogo">Ver catálogo</a>
     </header>
 
-    <main>
-        <section class="banner" id="inicio">
-            <div class="contenido-banner">
-                <p class="etiqueta">Tecnología para cada desafío</p>
+    <section class="banner" id="inicio">
+        <h2>La mejor tecnología para ti</h2>
+        <p>Encuentra laptops, accesorios y equipos tecnológicos.</p>
+        <a href="#productos" class="boton">Ver productos</a>
+    </section>
 
-                <h1>Encuentra el equipo ideal para trabajar y disfrutar</h1>
+    <main id="productos">
+        <h2>Nuestros productos</h2>
 
-                <p>
-                    Explora una selección de computadoras, accesorios y
-                    dispositivos con excelentes características y precios.
-                </p>
+        <div class="catalogo">
+            <article class="producto">
+                <img src="imagen/computadora.png"
+                    alt="Laptop">
+                <h3>Laptop HP</h3>
+                <p>Core i5, 8 GB RAM, SSD 512 GB.</p>
+                <strong>S/ 2,500</strong>
+                <a href="#contacto" class="boton">Consultar</a>
+            </article>
 
-                <a href="#catalogo" class="boton boton-principal">
-                    Explorar productos
-                </a>
-            </div>
-        </section>
+            <article class="producto">
+                <img src="imagen/pc.png"
+                    alt="Computadora de escritorio">
+                <h3>PC Gamer</h3>
+                <p>Ryzen 5, 16 GB RAM.</p>
+                <strong>S/ 3,200</strong>
+                <a href="#contacto" class="boton">Consultar</a>
+            </article>
 
-        <section class="seccion catalogo" id="catalogo">
-            <div class="titulo-seccion">
-                <p class="etiqueta">Nuestro catálogo</p>
-                <h2>Productos tecnológicos destacados</h2>
-                <p>
-                    Conoce nuestros equipos y encuentra la opción adecuada
-                    para tus actividades diarias.
-                </p>
-            </div>
+            <article class="producto">
+                <img src="imagen/teclado.png"
+                    alt="Teclado mecánico">
+                <h3>Teclado mecánico</h3>
+                <p>Conexión USB y luces RGB.</p>
+                <strong>S/ 150</strong>
+                <a href="#contacto" class="boton">Consultar</a>
+            </article>
 
-            <div class="rejilla-productos">
-                <article class="tarjeta-producto">
-                    <img
-                        src="[images.unsplash.com](https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=80)"
-                        alt="Laptop abierta sobre un escritorio"
-                    >
+            <article class="producto">
+                <img src="imagen/mause.png"
+                        alt="Mouse inalámbrico">
+                <h3>Mouse inalámbrico</h3>
+                <p>Conexión Bluetooth.</p>
+                <strong>S/ 80</strong>
+                <a href="#contacto" class="boton">Consultar</a>
+            </article>
 
-                    <div class="contenido-tarjeta">
-                        <span class="categoria">Computación</span>
-                        <h3>Laptop NovaBook Pro</h3>
-                        <p>
-                            Laptop Lenovo con procesador Intel Core i7,
-                            pantalla Full HD y diseño ligero.
-                        </p>
+            <article class="producto">
+                <img src="imagen/router.png"
+                        alt="Router Wi-Fi">
+                <h3>Router Wi-Fi</h3>
+                <p>Alta velocidad y cobertura.</p>
+                <strong>S/ 180</strong>
+                <a href="#contacto" class="boton">Consultar</a>
+            </article>
 
-                        <ul class="caracteristicas">
-                            <li><strong>Marca:</strong> Lenovo</li>
-                            <li><strong>Procesador:</strong> Intel Core i7</li>
-                        </ul>
-
-                        <div class="pie-tarjeta">
-                            <p class="precio">S/ 3,499.00</p>
-                            <a href="#contacto" class="boton boton-detalle">
-                                Consultar
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="tarjeta-producto">
-                    <img
-                        src="[images.unsplash.com](https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=900&q=80)"
-                        alt="Computadora de escritorio con monitor y teclado"
-                    >
-
-                    <div class="contenido-tarjeta">
-                        <span class="categoria">Computación</span>
-                        <h3>PC WorkStation X</h3>
-                        <p>
-                            Computadora de alto rendimiento para trabajos
-                            profesionales y múltiples tareas.
-                        </p>
-
-                        <ul class="caracteristicas">
-                            <li><strong>Procesador:</strong> AMD Ryzen 7</li>
-                            <li><strong>Memoria RAM:</strong> 32 GB</li>
-                        </ul>
-
-                        <div class="pie-tarjeta">
-                            <p class="precio">S/ 4,299.00</p>
-                            <a href="#contacto" class="boton boton-detalle">
-                                Consultar
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="tarjeta-producto">
-                    <img
-                        src="[images.unsplash.com](https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=900&q=80)"
-                        alt="Teclado mecánico con iluminación"
-                    >
-
-                    <div class="contenido-tarjeta">
-                        <span class="categoria">Accesorios</span>
-                        <h3>Teclado Mecánico Pulse</h3>
-                        <p>
-                            Teclado compacto con interruptores mecánicos,
-                            iluminación y respuesta precisa.
-                        </p>
-
-                        <ul class="caracteristicas">
-                            <li><strong>Conexión:</strong> USB tipo C</li>
-                            <li><strong>Formato:</strong> TKL</li>
-                        </ul>
-
-                        <div class="pie-tarjeta">
-                            <p class="precio">S/ 259.00</p>
-                            <a href="#contacto" class="boton boton-detalle">
-                                Consultar
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="tarjeta-producto">
-                    <img
-                        src="[images.unsplash.com](https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=900&q=80)"
-                        alt="Mouse inalámbrico de color negro"
-                    >
-
-                    <div class="contenido-tarjeta">
-                        <span class="categoria">Accesorios</span>
-                        <h3>Mouse AirClick</h3>
-                        <p>
-                            Mouse ergonómico y silencioso, adecuado para
-                            estudiar, trabajar o navegar.
-                        </p>
-
-                        <ul class="caracteristicas">
-                            <li><strong>Tecnología:</strong> Bluetooth 5.2</li>
-                            <li><strong>Resolución:</strong> 2400 DPI</li>
-                        </ul>
-
-                        <div class="pie-tarjeta">
-                            <p class="precio">S/ 119.00</p>
-                            <a href="#contacto" class="boton boton-detalle">
-                                Consultar
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="tarjeta-producto">
-                    <img
-                        src="[images.unsplash.com](https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=900&q=80)"
-                        alt="Router inalámbrico con antenas"
-                    >
-
-                    <div class="contenido-tarjeta">
-                        <span class="categoria">Conectividad</span>
-                        <h3>Router Wi-Fi Ultra</h3>
-                        <p>
-                            Router de doble banda para obtener una conexión
-                            estable en hogares y oficinas.
-                        </p>
-
-                        <ul class="caracteristicas">
-                            <li><strong>Velocidad:</strong> 3000 Mbps</li>
-                            <li><strong>Tecnología:</strong> Wi-Fi 6</li>
-                        </ul>
-
-                        <div class="pie-tarjeta">
-                            <p class="precio">S/ 389.00</p>
-                            <a href="#contacto" class="boton boton-detalle">
-                                Consultar
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="tarjeta-producto">
-                    <img
-                        src="[images.unsplash.com](https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=900&q=80)"
-                        alt="Unidad de almacenamiento de computadora"
-                    >
-
-                    <div class="contenido-tarjeta">
-                        <span class="categoria">Almacenamiento</span>
-                        <h3>Disco SSD Rapid</h3>
-                        <p>
-                            Unidad de almacenamiento rápida para mejorar el
-                            inicio y rendimiento del sistema.
-                        </p>
-
-                        <ul class="caracteristicas">
-                            <li><strong>Capacidad:</strong> 1 TB</li>
-                            <li><strong>Interfaz:</strong> NVMe M.2</li>
-                        </ul>
-
-                        <div class="pie-tarjeta">
-                            <p class="precio">S/ 349.00</p>
-                            <a href="#contacto" class="boton boton-detalle">
-                                Consultar
-                            </a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section class="seccion beneficios" id="beneficios">
-            <div class="titulo-seccion">
-                <p class="etiqueta">Compra con confianza</p>
-                <h2>Beneficios de TecnoNova</h2>
-            </div>
-
-            <div class="rejilla-beneficios">
-                <article class="beneficio">
-                    <span class="icono-beneficio" aria-hidden="true">✓</span>
-                    <h3>Garantía asegurada</h3>
-                    <p>
-                        Todos nuestros productos cuentan con garantía y
-                        respaldo ante defectos de fabricación.
-                    </p>
-                </article>
-
-                <article class="beneficio">
-                    <span class="icono-beneficio" aria-hidden="true">?</span>
-                    <h3>Soporte técnico</h3>
-                    <p>
-                        Recibe orientación para elegir, instalar y utilizar
-                        correctamente tus equipos.
-                    </p>
-                </article>
-
-                <article class="beneficio">
-                    <span class="icono-beneficio" aria-hidden="true">+</span>
-                    <h3>Amplia variedad</h3>
-                    <p>
-                        Encuentra diferentes alternativas de computación,
-                        conectividad y accesorios.
-                    </p>
-                </article>
-            </div>
-        </section>
+            <article class="producto">
+                <img src="imagen/disco.png"
+                        alt="Disco SSD">
+                <h3>Disco SSD</h3>
+                <p>Almacenamiento de 1 TB.</p>
+                <strong>S/ 280</strong>
+                <a href="#contacto" class="boton">Consultar</a>
+            </article>
+        </div>
     </main>
 
-    <footer class="pie-pagina" id="contacto">
-        <div class="contenido-pie">
-            <div>
-                <a href="#inicio" class="marca marca-pie">
-                    <span class="logotipo" aria-hidden="true">TN</span>
-                    <span>TecnoNova</span>
-                </a>
-                <p>Soluciones tecnológicas para tu hogar y negocio.</p>
-            </div>
+    <section class="beneficios">
+        <h2>¿Por qué elegirnos?</h2>
+        <p>Productos de calidad</p>
+        <p>Garantía y soporte técnico</p>
+        <p>Precios accesibles</p>
+    </section>
 
-            <div>
-                <h2>Contacto</h2>
-                <address>
-                    <p>Teléfono: <a href="tel:+51987654321">+51 987 654 321</a></p>
-                    <p>
-                        Correo:
-                        <a href="mailto:ventas@tecnonova.pe">
-                            ventas@tecnonova.pe
-                        </a>
-                    </p>
-                    <p>Av. Tecnología 123, Lima, Perú</p>
-                </address>
-            </div>
-
-            <nav aria-label="Navegación del pie de página">
-                <h2>Enlaces</h2>
-                <ul class="enlaces-pie">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#catalogo">Productos</a></li>
-                    <li><a href="#beneficios">Beneficios</a></li>
-                </ul>
-            </nav>
-        </div>
-
-        <p class="derechos">
-            &copy; 2026 TecnoNova. Todos los derechos reservados.
-        </p>
+    <footer id="contacto">
+        <h3>Contacto</h3>
+        <p>Correo: tecnova@ejemplo.com</p>
+        <p>© 2026 TechNova Store</p>
     </footer>
+
 </body>
 </html>
