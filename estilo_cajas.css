@@ -118,7 +118,7 @@ body {
 }
 
 button {
-    background: #95cff1;
+    background: #2855ed;
     border: none;
     color: white;
     border-radius: 20px;
@@ -131,8 +131,8 @@ button {
 /* GALERÍA */
 
 .gallery {
-    display: flex;
     margin-top: 32px;
+    display: grid;
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;

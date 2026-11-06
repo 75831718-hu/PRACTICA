@@ -33,7 +33,7 @@ h2 {
     font-size: 24px;
     font-weight: bold;
     display: flex;
-    order: 1;
+    flex-basis: 200px;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
@@ -58,6 +58,50 @@ h2 {
     width: 150px;
     height: 50px;
     background-color: #9e5e9b;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    flex-shrink: 1;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    margin: 5px;
+}
+.caja4 {
+    width: 150px;
+    height: 50px;
+    background-color: #b3b152;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    flex-shrink: 1;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    margin: 5px;
+}
+
+.caja5 {
+    width: 150px;
+    height: 50px;
+    background-color: #a9ade9;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    flex-shrink: 1;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    margin: 5px;
+}
+
+.caja6 {
+    width: 150px;
+    height: 50px;
+    background-color: #96bb88;
     color: white;
     font-size: 24px;
     font-weight: bold;
